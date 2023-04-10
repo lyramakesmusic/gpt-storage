@@ -1,8 +1,10 @@
 # gpt-storage
+
 A Python package for storing text chunks with their embeddings and retrieving the best-matching text for a given query using OpenAI's text embeddings API.
 gpt-storage
 
-### Installation
+## Setup
+
 To install gpt-storage, clone the GitHub repository and install the package locally:
 
 ```bash
@@ -11,7 +13,20 @@ cd gpt-storage
 pip install -e .
 ```
 
-### Usage
+To securely manage your OpenAI API token, use the `dotenv` library (install with `pip install python-dotenv`). Create a `.env` file in your project's root directory with your token: 
+
+`OPENAI_API_KEY=your_openai_api_token`
+```python
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = api_key
+```
+
+## Usage
+
 After installation, you can use the Storage class provided by gpt-storage to store text and embeddings, find the best match for a query, and save/load storage data to/from a JSON file.
 
 Example Usage
@@ -37,6 +52,3 @@ storage.save("storage.json")
 # Load storage data from a JSON file
 storage.load("storage.json")
 ```
-
-### Dependencies
-openai: To access OpenAI's embeddings API.
