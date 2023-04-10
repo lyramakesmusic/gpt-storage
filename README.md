@@ -8,7 +8,7 @@ gpt-storage
 To install gpt-storage, clone the GitHub repository and install the package locally:
 
 ```bash
-git clone https://github.com/yourusername/gpt-storage.git
+git clone https://github.com/lyramakesmusic/gpt-storage.git
 cd gpt-storage
 pip install -e .
 ```
